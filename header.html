@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+		<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<style>
+	*{
+	margin:0; padding:0; box-sizing: border-box;
+}
+a{
+	color:white; text-decoration: none;
+}
+
+header{
+	width:100%;
+	height: 70px;
+	background-color: #051de6;
+    background-image: linear-gradient(19deg, #051de6 20%, #f30aef 95%);
+	position: relative;
+}
+
+nav{
+	width:100%;
+	height:10vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+}
+
+.logo a{
+	color:white;
+	text-decoration: none;
+	font-size:1.6rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.menu ul li{
+	list-style: none;
+	display: inline-block;
+	padding:0 15px;
+	font-size: 20px;
+
+}
+.menu ul li a{
+	text-transform: capitalize;
+}
+.active,ul li:hover{
+	border-top: 2px solid #5dade2;
+	border-bottom: 2px solid #5dade2;
+}
+.content_btn a{
+	background-color: #d465ef;
+	padding: 12px 26px;
+	font-style: 14px;
+	font-weight: 500;
+	border:1px solid transparent;
+	text-transform: uppercase;
+}
+.content_btn a:hover{
+	background: linear-gradient(to bottom, #615cfd 0%, #d465ef 100%);
+}
+
+
+
+/* ///////////// center-content //////////////*/ 
+
+.center_content{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.center_content h1{
+	color:#fff;
+	font-size: 60px;
+	text-transform: capitalize;
+	font-weight: 700;
+	margin-bottom: 10px;
+	/*z-index:1;*/
+}
+.center_content h2{
+	font-size: 20px;
+	font-weight: 400;
+	color:#fff;
+	text-transform: capitalize;
+	/*z-index:1;*/
+}
+
+.center_content h2:before{
+	content:"";
+	width: 50px;
+	height:auto;
+	border:2px solid #fff;
+	position: absolute;
+	left:40px;
+	bottom:0;
+	margin-bottom: 10px;
+}
+/*----------------vertical tabs----------------------------------------*/
+
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 20%;
+
+  height: 648px;
+}
+
+.tabs {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 60%;
+
+  height: 648px;
+  overflow: auto;
+}
+/* Style the buttons inside the tab */
+.tabs button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+
+/* Change background color of buttons on hover */
+.tabs button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tabs button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 80%;
+  height:100vh;
+  border-left: none;
+  
+}
+
+</style>
+</head>
+<body>
+
+<header>
+	<nav class="navbar">
+		<div class="logo">
+			<a href="" target="_blank">Techno Programiz</a>
+		</div>
+
+		<div class="menu">
+			<ul>
+				<li><a href="#">home</a></li>
+				<li><a href="#" class="active">Programs</a></li>
+				<li><a href="#">service</a></li>
+				<!--<li><a href="#"></a></li>-->
+				<li><a href="#">about</a></li>
+			</ul>
+		</div>
+		<div class="content_btn">
+			<a href="#">contact me</a>
+		</div>
+</nav>
+</header>
+
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'home')" id="defaultOpen">PROGRAM</button>
+  <button class="tablinks" onclick="openCity(event, 'XII')">Programing in C</button>
+  <button class="tablinks" onclick="openCity(event, 'XI')">Programing in C++</button>
+  <button class="tablinks" onclick="openCity(event, 'x')">X</button>
+  <button class="tablinks" onclick="openCity(event, 'IX')">IX</button>
+  </div>
+
+
+<div id="XII" class="tabcontent">
+  <div class="tabs">
+  <button class="tablinks" onclick="openMenu(event, 'A')">Program To Print </button>
+  <button class="tablinks" onclick="openMenu(event, 'A')" id="defaultOpen">Mathematics-I</button>
+  <button class="tablinks" onclick="openMenu(event, 'B')" id="defaultOpen">Mathematics-II</button>
+  <button class="tablinks" onclick="openMenu(event, 'C')">Chemisrty-I</button>
+  <button class="tablinks" onclick="openMenu(event, 'D')">Chemisrty-II</button>
+  <button class="tablinks" onclick="openMenu(event, 'E')">Physics-I</button>
+  <button class="tablinks" onclick="openMenu(event, 'F')">Physics-II</button>
+  <button class="tablinks" onclick="openMenu(event, 'G')">Biology</button>
+  <button class="tablinks" onclick="openMenu(event, 'J')">Business Studies-I</button>
+  <button class="tablinks" onclick="openMenu(event, 'K')">Business Studies-II</button>
+  <button class="tablinks" onclick="openMenu(event, 'L')">Introduction MicroEconomics</button>
+  <button class="tablinks" onclick="openMenu(event, 'M')">Introduction MacroEconomics</button>
+  <button class="tablinks" onclick="openMenu(event, 'N')">Political ScienceII</button>
+  <button class="tablinks" onclick="openMenu(event, 'O')">Contemporary World Politics</button>
+  <button class="tablinks" onclick="openMenu(event, 'P')">Socail Change And Development In India</button>
+  <button class="tablinks" onclick="openMenu(event, 'Q')">Indian Society</button>
+  <button class="tablinks" onclick="openMenu(event, 'R')">Physocology</button>
+  <button class="tablinks" onclick="openMenu(event, 'S')">India-People and Economy</button>
+  <button class="tablinks" onclick="openMenu(event, 'T')">Practical Work in Geography-II</button>
+  <button class="tablinks" onclick="openMenu(event, 'U')">Fundamentals Of India Geography</button>
+  <button class="tablinks" onclick="openMenu(event, 'V')">Themes in Indian History-I</button>
+  <button class="tablinks" onclick="openMenu(event, 'W')">Themes in Indian History-II</button>
+  <button class="tablinks" onclick="openMenu(event, 'X')">Themes in Indian History-III</button>
+  <button class="tablinks" onclick="openMenu(event, 'Y')">Vistas</button>
+  <button class="tablinks" onclick="openMenu(event, 'Z')">Flamingo</button>
+  <button class="tablinks" onclick="openMenu(event, 'Bb')">Acountancy-I</button>
+  <button class="tablinks" onclick="openMenu(event, 'Cc')">Acountancy-II</button>
+
+</div>
+<!--Mathematics---I------>
+  
+</div>
+</div>
+
+<div id="A" class="tabcontent">
+  <h3 class="text-primary">Class XII Math-I Chapters</h3>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+function openMenu(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html>
